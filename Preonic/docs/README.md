@@ -8,6 +8,10 @@
 
 - The compiled keymap by default should be located in "%USERPROFILE%\qmk_firmware\\.build"
 
+## Details about this keymap
+- has a dedicated numpad layer under right hand
+- has a dedicated navigation layer that is located under left hand at wasd
+
 ## Layout
 ![layer 0](../res/layer_0.png)
 ![layer 1](../res/layer_1.png)
