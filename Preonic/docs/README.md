@@ -1,12 +1,14 @@
 # My Preonic keymap
 
 ## How to build
-- Copy "qitbit" folder into wherever QMK MYSY installs "qmk_firmware". Default should be in your %USERPROFILE% folder
+
+- Copy "qitbit" folder into '%USERPROFILE%\qmk_firmware\keyboards\preonic\keymaps' folder.
+
 - Run the following command in QMK MYSY
 
     `qmk compile --keyboard preonic/rev3 --keymap qitbit`
 
-- The compiled keymap by default should be located in "%USERPROFILE%\qmk_firmware\\.build"
+- The resulting compiled keymap should by default be located in "%USERPROFILE%\qmk_firmware\\.build"
 
 ## Details about this keymap
 - has a dedicated numpad layer under right hand
