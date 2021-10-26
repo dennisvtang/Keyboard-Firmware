@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "notes": "",
+  "notes": "My awesome keymap",
   "documentation": "\"This file is a QMK Configurator export. You can import this at <https://config.qmk.fm>. It can also be used directly with QMK's source code.\n\nTo setup your QMK environment check out the tutorial: <https://docs.qmk.fm/#/newbs>\n\nYou can convert this file to a keymap.c using this command: `qmk json2c {keymap}`\n\nYou can compile this keymap using this command: `qmk compile {keymap}`\"\n",
   "keyboard": "preonic/rev3",
   "keymap": "preonic_rev3_layout_preonic_1x2uc_mine",
@@ -93,9 +93,9 @@
       "KC_RPRN",
       "KC_TRNS",
       "KC_NO",
+      "RCS(KC_TAB)",
       "KC_NO",
-      "KC_NO",
-      "KC_NO",
+      "LCTL(KC_TAB)",
       "KC_NO",
       "KC_NO",
       "KC_NO",
@@ -373,5 +373,5 @@
       "KC_NO"
     ]
   ],
-  "author": ""
+  "author": "Anonymous"
 }
