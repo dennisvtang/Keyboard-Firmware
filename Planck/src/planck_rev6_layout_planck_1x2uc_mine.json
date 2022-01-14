@@ -49,7 +49,7 @@
       "MO(4)",
       "LT(1,KC_DEL)",
       "KC_SPC",
-      "MO(2)",
+      "LT(2,KC_F2)",
       "MO(5)",
       "KC_F22",
       "KC_NO",
