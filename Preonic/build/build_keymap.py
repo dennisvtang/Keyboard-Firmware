@@ -2,7 +2,12 @@ import subprocess
 
 
 def main(qmk_exe_path: str):
-    # todo start up qmk
+    # start up qmk
+    results = subprocess.Popen(
+        qmk_exe_path,
+        shell=True,
+    )
+
     # todo convert json to c
     # todo copy results
     # todo overwrite keymap.c
