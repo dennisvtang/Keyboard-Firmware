@@ -8,7 +8,7 @@ class WindowCapture:
         self.hwnd = win32gui.FindWindow(None, window_name)
         if not self.hwnd:
             self.list_window_names()
-            raise Exception('Window not found: {}'.format(window_name))
+            raise Exception(f'Window not found: {window_name}')
 
     # find the name of the window you're interested in.
     # once you have it, update window_capture()
