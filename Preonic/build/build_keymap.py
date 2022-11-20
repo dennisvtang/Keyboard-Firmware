@@ -17,7 +17,7 @@ def main(qmk_msys_exe: Path, qmk_home_dir: Path, keymap_dir: Path, keyboard_name
         try:
             qmk_window = WindowCapture('bash')
         except Exception as e:
-            print("Can't find qmk terminal")
+            print('Waiting for qmk terminal')
             time.sleep(2)
 
     # convert json to c
