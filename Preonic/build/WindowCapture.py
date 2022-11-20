@@ -1,5 +1,6 @@
 import win32gui
 import win32com.client
+import time
 
 
 class WindowCapture:
@@ -39,6 +40,8 @@ class WindowCapture:
         shell = win32com.client.Dispatch('WScript.Shell')
 
         # send command
-        shell.SendKeys(command)
+        for char in command:
+            shell.SendKeys(char)
+            time.sleep(0.01)
         if send_enter:
             shell.SendKeys('{ENTER}')
