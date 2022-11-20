@@ -3,10 +3,10 @@ from WindowCapture import WindowCapture
 import time
 
 
-def main(qmk_dir: str, keymap_dir: str):
+def main(qmk_msys_exe: Path, qmk_dir: str, keymap_dir: str):
     # open qmk and wait for it to start
     results = subprocess.Popen(
-        qmk_dir,
+        qmk_msys_exe,
         shell=True,
     )
 
