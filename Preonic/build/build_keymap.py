@@ -1,6 +1,7 @@
 import subprocess
 from WindowCapture import WindowCapture
 import time
+from pathlib import Path
 
 
 def main(qmk_msys_exe: Path, qmk_dir: Path, keymap_dir: Path):
