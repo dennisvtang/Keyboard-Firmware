@@ -9,10 +9,15 @@ def main(qmk_exe_path: str, keymap_json_path: str, keymap_c_path: str):
         qmk_exe_path,
         shell=True,
     )
-    time.sleep(1)
 
     # identify qmk terminal
-    qmk_window = WindowCapture('bash')
+    qmk_window = None
+    while qmk_window == None:
+        try:
+            qmk_window = WindowCapture('bash')
+        except Exception as e:
+            print("Can't find qmk terminal")
+            time.sleep(2)
 
     # convert json to c
     qmk_window.send_command(
