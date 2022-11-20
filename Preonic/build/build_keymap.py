@@ -5,7 +5,7 @@ from pathlib import Path
 import shutil
 
 
-def main(qmk_msys_exe: Path, qmk_dir: Path, keymap_dir: Path, keyboard_name: str):
+def main(qmk_msys_exe: Path, qmk_home_dir: Path, keymap_dir: Path, keyboard_name: str):
     # open qmk and wait for it to start
     results = subprocess.Popen(
         qmk_msys_exe,
@@ -26,7 +26,7 @@ def main(qmk_msys_exe: Path, qmk_dir: Path, keymap_dir: Path, keyboard_name: str
     )
 
     # copy keymap to path qmk can access
-    qmk_keyboards_dir = qmk_dir / 'keyboards'
+    qmk_keyboards_dir = qmk_home_dir / 'keyboards'
     assert qmk_keyboards_dir / keyboard_name in [keyboard for keyboard in qmk_keyboards_dir.iterdir()],  \
         'Specified keyboard not found in qmk dir'
     shutil.copytree(
