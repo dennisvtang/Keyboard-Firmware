@@ -3,10 +3,10 @@ from WindowCapture import WindowCapture
 import time
 
 
-def main(qmk_exe_path: str, keymap_json_path: str, keymap_dir: str):
+def main(qmk_dir: str, keymap_dir: str):
     # open qmk and wait for it to start
     results = subprocess.Popen(
-        qmk_exe_path,
+        qmk_dir,
         shell=True,
     )
 
@@ -21,7 +21,7 @@ def main(qmk_exe_path: str, keymap_json_path: str, keymap_dir: str):
 
     # convert json to c
     qmk_window.send_command(
-        f'qmk json2c {keymap_json_path} -o {(keymap_dir / "keymap.c").as_posix()}'
+        f'qmk json2c {(keymap_dir / "keymap.json").as_posix()} -o {(keymap_dir / "keymap.c").as_posix()}'
     )
 
     # todo build with qmk
