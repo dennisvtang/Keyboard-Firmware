@@ -51,6 +51,9 @@ def main(qmk_msys_exe: Path, qmk_home_dir: Path, keymap_dir: Path, keyboard_name
     output_path = keymap_dir.parent.parent / 'dist' / compiled_filename
     shutil.move(compiled_firmware_path, output_path)
 
+    # close qmk terminal
+    qmk_window.close_window()
+
 
 if __name__ == '__main__':
     qmk_exe_path = 'C:\QMK_MSYS\conemu\ConEmu64.exe'
