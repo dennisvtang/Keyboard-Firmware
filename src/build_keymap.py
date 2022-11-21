@@ -5,11 +5,11 @@ from pathlib import Path
 import shutil
 
 
-def main(qmk_msys_exe: Path, qmk_home_dir: Path, keymap_dir: Path, keyboard_name: str):
+def main(qmk_msys_exe_path: Path, qmk_home_dir: Path, keymap_dir: Path, keyboard_name: str):
     # open qmk
     print('Opening qmk terminal')
     results = subprocess.Popen(
-        qmk_msys_exe,
+        qmk_msys_exe_path,
     )
 
     # wait until qmk terminal is open
@@ -63,7 +63,43 @@ def main(qmk_msys_exe: Path, qmk_home_dir: Path, keymap_dir: Path, keyboard_name
 
 
 if __name__ == '__main__':
-    qmk_exe_path = 'C:\QMK_MSYS\conemu\ConEmu64.exe'
-    keymap_json_path = '../src/preonic_rev3_qitbit_keymap.json'
-    keymap_c_path = '../src/qitbit/keymap.c'
-    main(qmk_exe_path, keymap_json_path, keymap_c_path)
+    import argparse
+    import os
+
+    arg_parser = argparse.ArgumentParser(
+        description='',
+    )
+    arg_parser.add_argument(
+        '--qmk_msys_exe_path',
+        help='path to QMK MSYS executable',
+        required=True,
+        type=Path
+    )
+    arg_parser.add_argument(
+        '--qmk_home_dir',
+        help='qmk home directory, in QMK MSYS running `qmk env` can tell you this',
+        required=True,
+        type=Path
+    )
+    arg_parser.add_argument(
+        '--keymap_dir',
+        help='directory of keymap to compile',
+        required=True,
+        type=Path
+    )
+    arg_parser.add_argument(
+        '--keyboard_name',
+        help='name of the keyboard compiling firmware fore',
+        required=True,
+        type=Path
+    )
+    script_path = Path(os.getcwd())
+
+    args = arg_parser.parse_args()
+
+    main(
+        args.qmk_msys_exe_path,
+        args.qmk_home_dir,
+        args.keymap_dir,
+        args.keyboard_name,
+    )
