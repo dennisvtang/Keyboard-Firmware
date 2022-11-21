@@ -47,6 +47,9 @@ def main(qmk_msys_exe: Path, qmk_home_dir: Path, keymap_dir: Path, keyboard_name
         print('waiting for firmware to be compiled')
     print('firmware finished compiling')
 
+    # move firmware to repo
+    output_path = keymap_dir.parent.parent / 'dist' / compiled_filename
+    shutil.move(compiled_firmware_path, output_path)
 
 
 if __name__ == '__main__':
