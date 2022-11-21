@@ -40,10 +40,8 @@ def main(qmk_msys_exe: Path, qmk_home_dir: Path, keymap_dir: Path, keyboard_name
         f'qmk compile -kb {keyboard_name.as_posix()} -km {keymap_dir.name}'
     )
     # wait until qmk is finished compiling
-    compiled_firmware_path = (
-        qmk_home_dir /
-        f'{keyboard_name.parent}_{keyboard_name.name}_{keymap_dir.name}.bin'
-    )
+    compiled_filename = f'{keyboard_name.parent}_{keyboard_name.name}_{keymap_dir.name}.bin'
+    compiled_firmware_path = qmk_home_dir / compiled_filename
     while not compiled_firmware_path.is_file():
         time.sleep(1)
         print('waiting for firmware to be compiled')
