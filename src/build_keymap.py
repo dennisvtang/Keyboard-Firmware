@@ -7,25 +7,29 @@ import shutil
 
 def main(qmk_msys_exe: Path, qmk_home_dir: Path, keymap_dir: Path, keyboard_name: str):
     # open qmk
+    print('Opening qmk terminal')
     results = subprocess.Popen(
         qmk_msys_exe,
     )
 
     # wait until qmk terminal is open
+    print('Waiting until qmk terminal is opened')
     qmk_window = None
     while qmk_window == None:
         try:
             qmk_window = WindowCapture('bash')
         except Exception as e:
-            print('Waiting for qmk terminal')
+            print('- Waiting')
             time.sleep(2)
 
     # convert json to c
+    print('Converting json keymap to c file for firmware')
     qmk_window.send_command(
         f'qmk json2c {(keymap_dir / "keymap.json").as_posix()} -o {(keymap_dir / "keymap.c").as_posix()}'
     )
 
     # copy keymap to path qmk can access
+    print('Copying keymap to path qmk can access')
     qmk_keyboards_dir = qmk_home_dir / 'keyboards'
     assert qmk_keyboards_dir / keyboard_name.parent in [keyboard for keyboard in qmk_keyboards_dir.iterdir()],  \
         'Specified keyboard not found in qmk dir'
@@ -36,6 +40,7 @@ def main(qmk_msys_exe: Path, qmk_home_dir: Path, keymap_dir: Path, keyboard_name
     )
 
     # compile firmware with qmk
+    print('Compiling firmware')
     qmk_window.send_command(
         f'qmk compile -kb {keyboard_name.as_posix()} -km {keymap_dir.name}'
     )
@@ -46,8 +51,11 @@ def main(qmk_msys_exe: Path, qmk_home_dir: Path, keymap_dir: Path, keyboard_name
         time.sleep(1)
         print('waiting for firmware to be compiled')
     print('firmware finished compiling')
+        print('- Waiting')
+    print('- Finished')
 
     # move firmware to repo
+    print('Moving firmware to repo')
     output_path = keymap_dir.parent.parent / 'dist' / compiled_filename
     shutil.move(compiled_firmware_path, output_path)
 
