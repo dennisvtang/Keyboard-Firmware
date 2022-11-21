@@ -1,5 +1,6 @@
 import win32gui
 import win32com.client
+import win32con
 import time
 
 
@@ -45,3 +46,6 @@ class WindowCapture:
             time.sleep(0.01)
         if send_enter:
             shell.SendKeys('{ENTER}')
+
+    def close_window(self):
+        win32gui.PostMessage(self.hwnd, win32con.WM_CLOSE, 0, 0)
