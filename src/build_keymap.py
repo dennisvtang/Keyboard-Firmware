@@ -6,12 +6,12 @@ import shutil
 
 
 def main(qmk_msys_exe: Path, qmk_home_dir: Path, keymap_dir: Path, keyboard_name: str):
-    # open qmk and wait for it to start
+    # open qmk
     results = subprocess.Popen(
         qmk_msys_exe,
     )
 
-    # identify qmk terminal
+    # wait until qmk terminal is open
     qmk_window = None
     while qmk_window == None:
         try:
