@@ -49,7 +49,7 @@ def main(qmk_msys_exe_path: Path, qmk_home_dir: Path, keymap_dir: Path, keyboard
     compiled_firmware_path = qmk_home_dir / compiled_filename
     while not compiled_firmware_path.is_file():
         time.sleep(1)
-        print('- Waiting')
+        print('- Compiling')
     print('- Finished')
 
     # move firmware to repo
