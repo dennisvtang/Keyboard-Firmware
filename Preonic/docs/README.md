@@ -21,3 +21,5 @@
 ![layer 3](../res/layer_3.png)
 ![layer 4](../res/layer_4.png)
 ![layer 5](../res/layer_5.png)
+
+![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
