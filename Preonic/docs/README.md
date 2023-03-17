@@ -23,7 +23,7 @@
 ![layer 5](../res/layer_5.png)
 
 
-<h1 style="text-align: center;">Layer 1</h3>
+<h1 align="center">Layer 1</h1>
 <p align="middle">
   <img src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png" title="key1" width="50" />
   <img src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png" title="key2" width="50" />
@@ -81,7 +81,7 @@
   <img src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png" title="key1" width="50" />
 </p>
 
-<h1 style="text-align: center;">Layer 2</h1>
+<h1 align="center">Layer 2</h1>
 <p align="middle">
   <img src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png" title="key1" width="50" />
   <img src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png" title="key1" width="50" />
