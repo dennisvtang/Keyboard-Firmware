@@ -26,7 +26,7 @@
 <h1 style="text-align: center;">Layer 1</h3>
 <p align="middle">
   <img src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png" title="key1" width="50" />
-  <img src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png" title="key1" width="50" />
+  <img src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png" title="key2" width="50" />
   <img src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png" title="key1" width="50" />
   <img src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png" title="key1" width="50" />
   <img src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png" title="key1" width="50" />
