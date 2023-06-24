@@ -72,8 +72,7 @@
   <img src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png" title="key1" width="50" />
   <img src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png" title="key1" width="50" />
   <img src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png" title="key1" width="50" />
-  <img src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png" title="key1" width="50" />
-  <img src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png" title="key1" width="50" />
+  <img src=icon96.png title="Space bar" width="100"/>
   <img src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png" title="key1" width="50" />
   <img src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png" title="key1" width="50" />
   <img src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png" title="key1" width="50" />
@@ -130,8 +129,7 @@
   <img src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png" title="key1" width="50" />
   <img src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png" title="key1" width="50" />
   <img src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png" title="key1" width="50" />
-  <img src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png" title="key1" width="50" />
-  <img src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png" title="key1" width="50" />
+  <img src=icon96.png title="Space bar" width="100"/>
   <img src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png" title="key1" width="50" />
   <img src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png" title="key1" width="50" />
   <img src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png" title="key1" width="50" />
